@@ -16,7 +16,7 @@ async function startCheckout() {
       clientKey,
       environment: "test",
       locale: "en_US",
-      countryCode: "NL",
+      countryCode: "SG",
       showPayButton: true,
       translations: {
         "en-US": {
@@ -42,9 +42,10 @@ async function startCheckout() {
         showBrandIcon: true,
         hasHolderName: true,
         holderNameRequired: true,
+        billingAddressRequired: true,
         amount: {
           value: 10000,
-          currency: "EUR",
+          currency: "SGD",
         },
         placeholders: {
           cardNumber: "1234 5678 9012 3456",
@@ -53,6 +54,9 @@ async function startCheckout() {
           securityCodeFourDigits: "1234",
           holderName: "J. Smith",
         },
+      },
+      paynow: {
+        countdowntime: 1, //countdown timer in minutes
       },
     };
 
